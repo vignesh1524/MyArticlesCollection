@@ -1,0 +1,18 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <section class="jumbotron text-center" style="width: 1000px;background-color: yellow;">
+        <h1>Welcome to MyArticlesCollection</h1>
+        <p class="lead">Lorem ipsum dolor sit amet consectetur adipisicing elit. Error magnam harum aut suscipit enim exercitationem ad perspiciatis nemo eaque aliquid, assumenda doloribus cumque repellat nam iure tempora praesentium ullam vitae!</p>
+        {% if session.logged_in == NULL %}
+            <a href="/register" class="btn btn-primary btn-lg">Register</a>
+            <a href="/login" class="btn btn-success btn-lg">Login</a>
+        {% endif %}
+        {% if session.logged_in != NULL %}
+            <a class="btn btn-success" href="/add_article">Add Article</a>
+            <a class="btn btn-success" href="/articles">Read Articles</a>
+        {% endif %}
+    </section>
+
+{% endblock %}
