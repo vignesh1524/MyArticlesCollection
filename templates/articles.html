@@ -1,0 +1,11 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+
+    <h1>Articles</h1>
+    <ul class="list-group text-center">
+    {% for article in articles %}
+        <ul class="list-group-item" style="background-color: yellow;"><a style="text-decoration: none; color: black; " href="article/{{article.id}}">{{article.title}}</a></ul>
+    {% endfor %}
+    </ul>
+{% endblock %}
